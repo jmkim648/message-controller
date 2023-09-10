@@ -1,25 +1,17 @@
 import time
 import keyboard
-import requests
-from open_discord_chat import * 
-import datetime
 from bs4 import BeautifulSoup
+import requests
+import datetime
+from find_app_handle import * 
+from data import data
 
-chat_member = {
-    '강경모': 'https://github.com/ggengmo',
-    '김나영': 'https://github.com/nayeongdev',
-    '김재민': 'https://github.com/jmkim648',
-    '오정배': 'https://github.com/Alexmint001',
-    '황병헌': 'https://github.com/Ruler-H',
-    '남정식': 'https://github.com/sk7556',
-    '김창환': 'https://github.com/Blood-donation-day',
-    '이수빈': 'https://github.com/hantang820',
-    '김찬양': 'https://github.com/Kimchanyang524'
-}
+discord_open_chat = data.chat_name
+chat_member = data.member
 
 # 잔디 확인 메시지 발송
-def check_github_message():
-    find_and_tab_discord()  # from open_discord_chat.py
+def call_people_to_plant():
+    find_and_tab_discord(discord_open_chat)  # from find_app_handle.py
     people_to_call = search_member_github()
     type_and_enter(people_to_call)
 
