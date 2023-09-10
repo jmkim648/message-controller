@@ -26,10 +26,6 @@ def check_github_message():
 # member ithub주소에서 잔디부분 확인, 잔디 비어있을 경우 list에 넣어서 반환
 def search_member_github():
     member_list = []
-    current_datetime = datetime.datetime.now()
-    day = current_datetime.weekday() + 2    # return 월~일 = 0~6
-    if day == 8:                            # to set 일~토 = 1~7
-        day = 1
     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
 
     for name, github in chat_member.items():
@@ -38,7 +34,6 @@ def search_member_github():
         if response.status_code == 200:
             html = response.text
             soup = BeautifulSoup(html, 'html.parser')
-            # data_find = soup.find(f'td', {'data-date': '{today_date}'})
             data_find = soup.find(f'td', {'data-date': today_date})
             text = data_find.get_text()
             if text[:2] == 'No':
@@ -51,7 +46,7 @@ def search_member_github():
 def type_and_enter(list):
     text = '잔디봇: '
     if list is None:
-        text += '오늘 잔디 모두 확인했습니다. 수고하셨습니다.'
+        text += '오늘 잔디 모두 확인했습니다. 수고하셨습니다!'
         keyboard.write(text)
     else:
         keyboard.write(text)
@@ -66,5 +61,5 @@ def call_person(list):
         keyboard.write(text)
         time.sleep(0.1)
         keyboard.press_and_release('tab')
-    text = '님, 오늘 잔디 안 심겨있습니다. 확인해주세요.'
+    text = '님, 오늘 잔디 안 심겨있습니다. 확인해주세요!'
     keyboard.write(text)

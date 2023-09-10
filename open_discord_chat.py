@@ -2,7 +2,6 @@ import time
 import win32gui
 import keyboard
 
-
 discord_open_chat = '"1일 1커밋 목표로 같이 스터디하실 분들 모집합니다" | [ESTsoft] 백엔드 개발자 오르미 3기 - Discord'
 
 # # 핸들 리스트 받아오기
@@ -15,7 +14,6 @@ discord_open_chat = '"1일 1커밋 목표로 같이 스터디하실 분들 모�
 #     output = []
 #     win32gui.EnumWindows(callback, output)
 #     return output
-
 
 # print("\n".join("{: 9d} {}".format(h, t) for t, h in getWindowList()))
 
