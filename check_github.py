@@ -13,7 +13,7 @@ chat_member = data.member
 def call_people_to_plant():
     find_and_tab_discord(discord_open_chat)  # from find_app_handle.py
     people_to_call = search_member_github()
-    type_and_enter(people_to_call)
+    type_message_and_enter(people_to_call)
 
 # member ithub주소에서 잔디부분 확인, 잔디 비어있을 경우 list에 넣어서 반환
 def search_member_github():
@@ -35,7 +35,7 @@ def search_member_github():
     return member_list
 
 #디스코드 focus 후 메시지 발송
-def type_and_enter(list):
+def type_message_and_enter(list):
     text = '잔디봇: '
     if list is None:
         text += '오늘 잔디 모두 확인했습니다. 수고하셨습니다!'
