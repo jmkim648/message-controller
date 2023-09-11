@@ -5,6 +5,7 @@ import sys
 from PIL import Image
 from check_github import *
 from play_ladder import *
+import threading
 
 scheduler = schedule.Scheduler()
 
@@ -17,6 +18,11 @@ if __name__ == '__main__':
         icon.stop()
         sys.exit(0)
 
+    def run_schedule():
+        while True:
+            scheduler.run_pending()
+            time.sleep(60)  
+
     def main():
         scheduler.every().day.at("22:00").do(call_people_to_plant) # from check_github.py
 
@@ -25,11 +31,13 @@ if __name__ == '__main__':
             pystray.MenuItem('Exit', exit_app)
         )
         icon = pystray.Icon("잔디봇", image, "잔디봇", menu)
+
+        schedule_thread = threading.Thread(target=run_schedule)
+        schedule_thread.daemon = True
+        schedule_thread.start()
+
         icon.run()
 
-        while True:
-            scheduler.run_pending()
-            time.sleep(60)    
     
     main()
     
