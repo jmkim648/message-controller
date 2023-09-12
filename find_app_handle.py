@@ -19,6 +19,8 @@ import keyboard
 def find_and_tab_discord(app_name):
     hwnd_main = win32gui.FindWindow(None, app_name)
     if hwnd_main is not None:
+        keyboard.press("alt")
         win32gui.SetForegroundWindow(hwnd_main)
+        keyboard.release("alt")
     time.sleep(0.5)
     keyboard.press_and_release('tab')
