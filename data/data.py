@@ -1,6 +1,5 @@
 chat_name = '"1일 1커밋 목표로 같이 스터디하실 분들 모집합니다" | [ESTsoft] 백엔드 개발자 오르미 3기 - Discord'
 
-
 member = {
     '강경모': 'https://github.com/ggengmo',
     '김나영': 'https://github.com/nayeongdev',
