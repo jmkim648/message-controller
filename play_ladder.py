@@ -10,16 +10,10 @@ team_one = []
 team_two = []
 
 def play_ladder():
-    for item in data.member.items():
-        result_array.append(item[0])
-        
+    result_array = list(data.member.keys())
     random.shuffle(result_array)
-    for index, item in enumerate(result_array):
-        if index < 4:
-            team_one.append(item)
-        else:
-            team_two.append(item)
-        
+    team_one = result_array[:4]
+    team_two = result_array[4:]
 
     find_and_tab_discord(data.chat_name)
     text = '<사다리 게임>'
