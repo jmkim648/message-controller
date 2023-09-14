@@ -4,7 +4,6 @@ import pystray
 import sys
 from PIL import Image
 
-
 def exit_app(icon, item):
     # 필요하다면 종료 전 데이터 정리
     icon.stop()
