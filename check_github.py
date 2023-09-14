@@ -51,7 +51,7 @@ def call_person(list):
     for item in list:
         text = '@' + item
         keyboard.write(text)
-        time.sleep(0.1)
+        time.sleep(0.3)
         keyboard.press_and_release('tab')
     text = '님, 오늘 잔디 안 심겨있습니다. 확인해주세요!'
     keyboard.write(text)
