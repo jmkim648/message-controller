@@ -10,7 +10,7 @@ def exit_app(icon, item):
     sys.exit(0)
 
 def main():
-    image = Image.open("./img/favicon.ico")
+    image = Image.open("./img/icon.ico")
 
     menu = (
         pystray.MenuItem('Plant grass', call_people_to_plant),
