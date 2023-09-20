@@ -8,7 +8,7 @@
 pystray 모듈을 통해 별다른 UI 없이 작업표시줄의 빠른실행 아이콘으로 프로그램을 관리합니다.
 data.py에서 스터디 멤버의 인원과 디스코드 서버의 이름을 관리합니다.
 
-Github: https://github.com/jmkim648/message-controller
+GitHub: https://github.com/jmkim648/message-controller
 
 
 ## <목차>
