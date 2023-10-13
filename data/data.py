@@ -9,5 +9,6 @@ member = {
     '남정식': 'https://github.com/sk7556',
     '김창환': 'https://github.com/Blood-donation-day',
     '이수빈': 'https://github.com/hantang820',
-    '김찬양': 'https://github.com/Kimchanyang524'
+    '김찬양': 'https://github.com/Kimchanyang524',
+    '송대현': 'https://github.com/UkiDelly'
 }
